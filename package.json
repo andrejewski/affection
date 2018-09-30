@@ -1,0 +1,31 @@
+{
+  "name": "affection",
+  "description": "Declarative side-effects",
+  "version": "0.0.1",
+  "author": "Chris Andrejewski <christopher.andrejewski@gmail.com> (http://chrisandrejewski.com)",
+  "bugs": {
+    "url": "https://github.com/andrejewski/affection/issues"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "fixpack": "^2.3.1",
+    "prettier": "^1.13.4",
+    "standard": "^11.0.0"
+  },
+  "homepage": "https://github.com/andrejewski/affection#readme",
+  "keywords": [
+    "declarative",
+    "effect",
+    "side"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrejewski/affection.git"
+  },
+  "scripts": {
+    "lint": "prettier {src,test}/**/*.js --write && fixpack && standard --fix",
+    "test": "npm run lint && ava"
+  }
+}
