@@ -1,7 +1,7 @@
 {
   "name": "affection",
   "description": "Declarative side-effects",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "Chris Andrejewski <christopher.andrejewski@gmail.com> (http://chrisandrejewski.com)",
   "bugs": {
     "url": "https://github.com/andrejewski/affection/issues"

@@ -5,6 +5,10 @@
 npm install affection
 ```
 
+[![npm](https://img.shields.io/npm/v/affection.svg)](https://www.npmjs.com/package/affection)
+[![Build Status](https://travis-ci.org/andrejewski/affection.svg?branch=master)](https://travis-ci.org/andrejewski/affection)
+[![Greenkeeper badge](https://badges.greenkeeper.io/andrejewski/affection.svg)](https://greenkeeper.io/)
+
 Affection is a library for describing side-effects as plain data and providing composition utilities.
 This project aims to improve on similar libraries by not using generators.
 

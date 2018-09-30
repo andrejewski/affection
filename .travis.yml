@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- node
+deploy:
+  provider: npm
+  email: christopher.andrejewski@gmail.com
+  api_key:
+    secure: WBubXWapEz3aabwZ1ZlDNxOAV0X143Y29fB9qCD3LzXIm7dt9mqFiPVYCoghR2+aNSVhn7cLjGKe85s/fsuzPDg53B+278QVO6aOPnJbW+4iuKb+JZ545hZyroXxUXA/9nzoTy46WaZeI2DEvfE7Rv2FJzGEP7WCoXXR1x+VAaSJeyW/KiAAMLeD+9FrlZnG7Avcr0Xh9c3yFGPWfcZtc7JklOcaFgQcJjDCqVhDJRExACo7mINJka/MURUoAgnuT0UcQk/6e0lRsMOaWF367UVFIj2qlt4/bMtkIzrTY9WqVlCOWuY3u3fPbto6W/P4IbgpUvxJbjEhx29uvJ9XSFFCgywqvz2rb6raclZbnJqD5OFuhXQnf68kHLuaMivAGh3pTUHtOIs5hCatVjQp+We9gmYvw8v3u4FZsCD4OvJXjn/nyvLqkF5KCh3ffEWBSNdsFB9NjK5TX7lj5s0GOG7CPBr+JQbA67bVgjBtR0nEu4foW41K/DtNU4kHUygMRK3+c6F0qfmFOuSh1uuB6bqKk/O0RhyFtqEIF56TyPZlfeWp8Lp3kiKm0yJXIqeSy8zy2/rEpc6vz1YC0aC4n8pAwHzVYfUr/mQqt/laHKYKTVv0/hg1JGU8wIgFedJGBd+NJ+9ElnraGvGaJoYYUppkJO06rP43J/GFQtcUvHw=
+  on:
+    tags: true
+    repo: andrejewski/affection
