@@ -16,8 +16,8 @@ Generators make testing difficult in that:
 
 - They can have internal state.
 - Each segment of the function cannot be tested in isolation.
-- Each segment of the function can only be reach after the segments before it.
-- Generators are awkward. Conversing with a generator with `next()` isn't as simple as function calling.
+- Each segment of the function can only be reached after the segments before it.
+- Generators are awkward. Conversing with a generator using `next()` isn't as simple as function calling.
 - Composition of generators is harder than functions inherently.
 
 So Affection is all about functions, with the goals:
@@ -153,10 +153,24 @@ A step is a means of encapsulating an effect without needing a plan (as describe
 
 This is hard to understand without an understanding of how `run` works.
 The `run` function is recursively executing plans until there is nothing more to do.
-A step is a way of saying, "Execute this effect; we might be done, might not."
-There could be 5 more effects to run or it's the end result; the step doesn't need to know.
-
+A step is a way of saying, "Execute this effect; I don't know what happens with the result."
 This is for code reuse: effects should be decoupled from their consumers.
+
+For more clarity, let's look at the `step` function:
+
+```js
+const step = makeEffect => next => input => [makeEffect(input), next]
+```
+
+We define our `makeEffect` without needing to know the consumer.
+The `next` is what will consume the result.
+Later, steps are composed when the consumers are known.
+Finally, the step is given an `input` to build its effect.
+
+In summary, steps decouple:
+- Creating the effect: `makeEffect`
+- Consuming the effect's result: `next`
+- Building the final plan, given an `input`
 
 ### `mapStep`
 > `mapStep(step: Step, transform: function): Step`
