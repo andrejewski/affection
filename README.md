@@ -35,7 +35,7 @@ This first example does not use any composition.
 import { run, call, callMethod } from 'affection'
 
 const getJSON = url => [
-  call(fetch, url),
+  call(fetch, [url]),
   resp => [callMethod(resp, 'json')]
 ]
 
@@ -182,7 +182,7 @@ For example, we are building a dictionary of the most used word for each country
 We want to retain the country we are querying about in the result.
 
 ```js
-const getMostUsedWordInCountry = country => call(MyAPI, country)
+const getMostUsedWordInCountry = country => call(MyAPI, [country])
 const countryWordStep = step(getMostUsedWordInCountry)
 const getCountryWord = mapStep(countryWordStep, (result, country) => ({ country, word: result }))
 
